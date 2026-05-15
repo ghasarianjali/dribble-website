@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dribbble Pro - Elevate Your Design Career</title>
+    <style>
+        :root {
+            --pink: #ea4c89;
+            --pink-hover: #f06292;
+            --dark: #0d0c22;
+            --gray-deep: #3d3d4e;
+            --gray-light: #f3f3f4;
+            --text-main: #2b2b2b;
+            --text-muted: #6e6d7a;
+            --white: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--white);
+            color: var(--dark);
+            line-height: 1.5;
+        }
+
+        /* Navigation */
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            border-bottom: 1px solid var(--gray-light);
+        }
+
+        .logo {
+            font-weight: 800;
+            font-size: 24px;
+            color: var(--dark);
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--pink);
+        }
+
+        .btn {
+            background-color: var(--dark);
+            color: var(--white);
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 14px;
+            transition: background 0.2s;
+        }
+
+        .btn:hover {
+            background-color: var(--gray-deep);
+        }
+
+        .btn-pink {
+            background-color: var(--pink);
+        }
+
+        .btn-pink:hover {
+            background-color: var(--pink-hover);
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 80px 20px 40px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .badge {
+            background-color: #fbe9f0;
+            color: var(--pink);
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            display: inline-block;
+            margin-bottom: 24px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            font-weight: 700;
+            letter-spacing: -1px;
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            color: var(--text-muted);
+            font-size: 20px;
+            margin-bottom: 32px;
+        }
+
+        /* Pricing Cards */
+        .pricing-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1050px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .card {
+            border: 1px solid black;
+            border-radius: 16px;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            box-shadow: ;
+        }
+
+        .card.popular {
+            border: 2px solid var(--pink);
+        }
+
+        .card-tag {
+            position: absolute;
+            top: -12px;
+            right: 40px;
+            background: var(--pink);
+            color: var(--white);
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .plan-name {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .plan-desc {
+            color: var(--text-muted);
+            font-size: 14px;
+            margin-bottom: 24px;
+            min-height: 42px;
+        }
+
+        .price {
+            font-size: 40px;
+            font-weight: 800;
+            margin-bottom: 24px;
+        }
+
+        .price span {
+            font-size: 16px;
+            font-weight: 400;
+            color: var(--text-muted);
+        }
+
+        .features-list {
+            list-style: none;
+            margin-top: 32px;
+            margin-bottom: 40px;
+            flex-grow: 1;
+        }
+
+        .features-list li {
+            font-size: 15px;
+            color: var(--text-main);
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+        }
+
+        .features-list li::before {
+            content: "✓";
+            color: #27ae60;
+            font-weight: bold;
+            margin-right: 12px;
+            font-size: 16px;
+        }
+
+        .card .btn {
+            text-align: center;
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 36px; }
+            .hero p { font-size: 18px; }
+            .nav { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <nav class="nav">
+        <a href="http://127.0.0.1:5500/form/grid/project/project1.html" class="logo">dribbble<span>.</span></a>
+        <a href="login.html" class="btn">Sign In</a>
+    </nav>
+
+    <!-- Main Hero -->
+    <header class="hero">
+        <span class="badge">Dribbble Pro</span>
+        <h1>Ready to level up your design career?</h1>
+        <p>Get hired faster, pitch your services, and showcase your work with advanced profile features.</p>
+    </header>
+
+    <!-- Pricing Section -->
+    <main class="pricing-container">
+        
+        <!-- Pro Plan -->
+        <section class="card">
+            <h2 class="plan-name">Pro</h2>
+            <p class="plan-desc">Perfect for freelancers looking to showcase their portfolio and win clients.</p>
+            <div class="price">$8<span>/mo</span></div>
+            <a href="#" class="btn">Get Started</a>
+            <ul class="features-list">
+                <li>Custom profile header video</li>
+                <li>Pitch multi-shot projects</li>
+                <li>"Hire Me" button on shots</li>
+                <li>Basic profile analytics</li>
+            </ul>
+        </section>
+
+        <!-- Pro Business Plan -->
+        <section class="card popular">
+            <span class="card-tag">Best Value</span>
+            <h2 class="plan-name">Pro Business</h2>
+            <p class="plan-desc">Built for design studios and freelancers wanting maximum lead generation.</p>
+            <div class="price">$15<span>/mo</span></div>
+            <a href="#" class="btn btn-pink">Go Pro Business</a>
+            <ul class="features-list">
+                <li>All features in Pro plan</li>
+                <li>Priority placement in designer searches</li>
+                <li>Exclusive daily freelance leads</li>
+                <li>Advanced profile view analytics</li>
+                <li>Pitch directly to active job listings</li>
+            </ul>
+        </section>
+
+    </main>
+
+</body>
+</html>

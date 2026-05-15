@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <style>
+    body { font-family: sans-serif; }
+.blog-nav 
+{ display: flex; 
+    gap: 20px; 
+    padding: 16px; 
+    border-bottom: 1px solid #eee; 
+}
+.blog-layout { 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 20px; }
+.thumbnail-frame img { 
+    width: 100%; 
+    border-radius: 12px; }
+.featured-card .thumbnail-frame { 
+    aspect-ratio: 21/9;
+ }
+.stories-feed { 
+    display: grid; 
+    grid-template-columns: repeat(1, 1fr); gap: 30px; 
+}
+.main-title { 
+    font-size: 32px;
+ }
+.sub-title { 
+    font-size: 20px; 
+}
+@media (max-width: 992px) {
+     .stories-feed { 
+        grid-template-columns: repeat(2, 1fr); 
+    } 
+    }
+@media (max-width: 640px) {
+     .stories-feed {
+         grid-template-columns: 1fr; 
+        } 
+    }
+
+ </style>
+</head>
+<body>
+    <nav class="blog-nav">
+        <a href="http://127.0.0.1:5500/form/grid/project/project1.html"><img src="drib.jpeg" height="50" width="150"></a>
+        
+        <h1>COMMUNITY</h1>
+        
+    </nav>
+    <main class="blog-layout">
+        <section class="hero-feature">
+            <article class="featured-card">
+                <div class="thumbnail-frame"><img src="com.jpeg" alt="..."></div>
+                <h1 class="main-title"><a href="#">Featured Article Title</a></h1>
+            </article>
+        </section>
+        <section class="stories-feed">
+            <article class="feed-item">
+                <div class="thumbnail-frame"><img src="comm.jpeg" alt="...">How to Share
+                     Your Work on Dribbble (While Attracting the Right Clients) Create, don't wait
+Shots are how clients and peers understand your skills, taste, and process. And 
+designers who grow their businesses on Dribbble tend to do two things well: they share
+ work regularly and clearly. This guide walks through what to post, how to present it, 
+and how to make every Shot work a little harder for you.</div>
+                <h2 class="sub-title"><a href="#">Grid Post Title</a></h2>
+            </article>
+        </section>
+         <section class="stories-feed">
+            <article class="feed-item">
+                <div class="thumbnail-frame"><img src="ff.jpeg" alt="...">Eugene and the Shakuro team have built a design
+                     practice grounded in experimentation, intention, and visual storytelling. As a Design Lead, 
+                     Eugene shares how Dribbble became a creative engine for the team; not just for exposure, 
+                     but for shaping ideas, building trust, 
+                    and growing long-term client relationships</div>
+                <h2 class="sub-title"><a href="#">Grid Post Title</a></h2>
+            </article>
+        </section>
+    </main>
+</body>
+</html>

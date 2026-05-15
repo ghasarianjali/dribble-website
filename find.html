@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+    /* Base Resets & Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: #f8f7f4;
+    color: #3d3d4e;
+    padding: 30px;
+}
+
+.gallery-header {
+    margin-bottom: 24px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.gallery-header h1 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+/* Responsive CSS Grid Container */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 36px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Individual Portfolio Cards */
+.shot-card {
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+}
+
+.image-wrapper {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    aspect-ratio: 4 / 3;
+    cursor: pointer;
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+/* Interaction Overlays */
+.hover-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.6) 100%);
+    opacity: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 16px;
+    transition: opacity 0.25s ease;
+}
+
+.image-wrapper:hover img {
+    transform: scale(1.04);
+}
+
+.image-wrapper:hover .hover-overlay {
+    opacity: 1;
+}
+
+.shot-title {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-right: 10px;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.action-buttons button {
+    background-color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    width: 36px;
+    height: 36px;
+    color: #3d3d4e;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.action-buttons button:hover {
+    color: #ea4c89; /* Core Dribbble Pink color token */
+}
+
+/* Metadata Footer Elements */
+.shot-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8px;
+    padding: 0 4px;
+    font-size: 14px;
+}
+
+.designer-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.avatar {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.designer-name {
+    font-weight: 500;
+    color: #0d0c22;
+}
+
+.badge {
+    background-color: #ccc;
+    color: #ffffff;
+    font-size: 10px;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 1px 4px;
+    border-radius: 3px;
+}
+
+.shot-stats {
+    display: flex;
+    gap: 12px;
+    color: #9e9e9e;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.stat-item i {
+    margin-right: 2px;
+}
+
+</style>
+</head>
+<body>
+
+    <header class="gallery-header">
+        <nav class="blog-nav">
+        <a href="http://127.0.0.1:5500/form/grid/project/project1.html"><img src="drib.jpeg" height="50" width="150"></a>
+        
+    </nav>
+        <h1>Popular Shots</h1>
+    </header>
+
+    <main class="grid-container">
+        <!-- Shot Card 1 -->
+        <div class="shot-card">
+            <div class="image-wrapper">
+                <img src="im1.jpeg" alt="Dribbble Shot">
+                <div class="hover-overlay">
+                    <span class="shot-title">Lunaria Web Design</span>
+                    <div class="action-buttons">
+                        <button aria-label="Save shot"><i class="fa-solid fa-folder-plus"></i></button>
+                        <button aria-label="Like shot"><i class="fa-solid fa-heart"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="shot-meta">
+                <div class="designer-info">
+                    <img src="im11.jpeg" alt="Designer Avatar" class="avatar">
+                    <span class="designer-name">Aura Studio</span>
+                    <span class="badge">Team</span>
+                </div>
+                <div class="shot-stats">
+                    <span class="stat-item"><i class="fa-solid fa-heart"></i> 142</span>
+                    <span class="stat-item"><i class="fa-solid fa-eye"></i> 12.5k</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Shot Card 2 -->
+        <div class="shot-card">
+            <div class="image-wrapper">
+                <img src="im2.jpeg" alt="Dribbble Shot">
+                <div class="hover-overlay">
+                    <span class="shot-title">Mobile Crypto Wallet</span>
+                    <div class="action-buttons">
+                        <button aria-label="Save shot"><i class="fa-solid fa-folder-plus"></i></button>
+                        <button aria-label="Like shot"><i class="fa-solid fa-heart"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="shot-meta">
+                <div class="designer-info">
+                    <img src="im3.jpeg" alt="Designer Avatar" class="avatar">
+                    <span class="designer-name">Alex Fedorov</span>
+                </div>
+                <div class="shot-stats">
+                    <span class="stat-item"><i class="fa-solid fa-heart"></i> 98</span>
+                    <span class="stat-item"><i class="fa-solid fa-eye"></i> 8.1k</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Shot Card 3 -->
+        <div class="shot-card">
+            <div class="image-wrapper">
+                <img src="im8.jpeg" alt="Dribbble Shot">
+                <div class="hover-overlay">
+                    <span class="shot-title">SaaS Analytics Platform</span>
+                    <div class="action-buttons">
+                        <button aria-label="Save shot"><i class="fa-solid fa-folder-plus"></i></button>
+                        <button aria-label="Like shot"><i class="fa-solid fa-heart"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="shot-meta">
+                <div class="designer-info">
+                    <img src="im9.jpeg" alt="Designer Avatar" class="avatar">
+                    <span class="designer-name">Pixel Craft</span>
+                    <span class="badge">Pro</span>
+                </div>
+                <div class="shot-stats">
+                    <span class="stat-item"><i class="fa-solid fa-heart"></i> 215</span>
+                    <span class="stat-item"><i class="fa-solid fa-eye"></i> 19.4k</span>
+                </div>
+            </div>
+        </div>
+           <div class="shot-card">
+            <div class="image-wrapper">
+                <img src="im9.jpeg" alt="Dribbble Shot">
+                <div class="hover-overlay">
+                    <span class="shot-title">Lunaria Web Design</span>
+                    <div class="action-buttons">
+                        <button aria-label="Save shot"><i class="fa-solid fa-folder-plus"></i></button>
+                        <button aria-label="Like shot"><i class="fa-solid fa-heart"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="shot-meta">
+                <div class="designer-info">
+                    <img src="im8.jpeg" alt="Designer Avatar" class="avatar">
+                    <span class="designer-name">Aura Studio</span>
+                    <span class="badge">Team</span>
+                </div>
+                <div class="shot-stats">
+                    <span class="stat-item"><i class="fa-solid fa-heart"></i> 142</span>
+                    <span class="stat-item"><i class="fa-solid fa-eye"></i> 12.5k</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Shot Card 2 -->
+        <div class="shot-card">
+            <div class="image-wrapper">
+                <img src="im6.jpeg" alt="Dribbble Shot">
+                <div class="hover-overlay">
+                    <span class="shot-title">Mobile Crypto Wallet</span>
+                    <div class="action-buttons">
+                        <button aria-label="Save shot"><i class="fa-solid fa-folder-plus"></i></button>
+                        <button aria-label="Like shot"><i class="fa-solid fa-heart"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="shot-meta">
+                <div class="designer-info">
+                    <img src="im7.jpeg" alt="Designer Avatar" class="avatar">
+                    <span class="designer-name">Alex Fedorov</span>
+                </div>
+                <div class="shot-stats">
+                    <span class="stat-item"><i class="fa-solid fa-heart"></i> 98</span>
+                    <span class="stat-item"><i class="fa-solid fa-eye"></i> 8.1k</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Shot Card 3 -->
+        <div class="shot-card">
+            <div class="image-wrapper">
+                <img src="im7.jpeg" alt="Dribbble Shot">
+                <div class="hover-overlay">
+                    <span class="shot-title">SaaS Analytics Platform</span>
+                    <div class="action-buttons">
+                        <button aria-label="Save shot"><i class="fa-solid fa-folder-plus"></i></button>
+                        <button aria-label="Like shot"><i class="fa-solid fa-heart"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="shot-meta">
+                <div class="designer-info">
+                    <img src="im6.jpeg" alt="Designer Avatar" class="avatar">
+                    <span class="designer-name">Pixel Craft</span>
+                    <span class="badge">Pro</span>
+                </div>
+                <div class="shot-stats">
+                    <span class="stat-item"><i class="fa-solid fa-heart"></i> 215</span>
+                    <span class="stat-item"><i class="fa-solid fa-eye"></i> 19.4k</span>
+                </div>
+            </div>
+        </div>
+           <div class="shot-card">
+            <div class="image-wrapper">
+                <img src="im11.jpeg" alt="Dribbble Shot">
+                <div class="hover-overlay">
+                    <span class="shot-title">Lunaria Web Design</span>
+                    <div class="action-buttons">
+                        <button aria-label="Save shot"><i class="fa-solid fa-folder-plus"></i></button>
+                        <button aria-label="Like shot"><i class="fa-solid fa-heart"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="shot-meta">
+                <div class="designer-info">
+                    <img src="im1.jpeg" alt="Designer Avatar" class="avatar">
+                    <span class="designer-name">Aura Studio</span>
+                    <span class="badge">Team</span>
+                </div>
+                <div class="shot-stats">
+                    <span class="stat-item"><i class="fa-solid fa-heart"></i> 142</span>
+                    <span class="stat-item"><i class="fa-solid fa-eye"></i> 12.5k</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Shot Card 2 -->
+        <div class="shot-card">
+            <div class="image-wrapper">
+                <img src="im3.jpeg" alt="Dribbble Shot">
+                <div class="hover-overlay">
+                    <span class="shot-title">Mobile Crypto Wallet</span>
+                    <div class="action-buttons">
+                        <button aria-label="Save shot"><i class="fa-solid fa-folder-plus"></i></button>
+                        <button aria-label="Like shot"><i class="fa-solid fa-heart"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="shot-meta">
+                <div class="designer-info">
+                    <img src="im2.jpeg" alt="Designer Avatar" class="avatar">
+                    <span class="designer-name">Alex Fedorov</span>
+                </div>
+                <div class="shot-stats">
+                    <span class="stat-item"><i class="fa-solid fa-heart"></i> 98</span>
+                    <span class="stat-item"><i class="fa-solid fa-eye"></i> 8.1k</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Shot Card 3 -->
+        <div class="shot-card">
+            <div class="image-wrapper">
+                <img src="im5.jpeg" alt="Dribbble Shot">
+                <div class="hover-overlay">
+                    <span class="shot-title">SaaS Analytics Platform</span>
+                    <div class="action-buttons">
+                        <button aria-label="Save shot"><i class="fa-solid fa-folder-plus"></i></button>
+                        <button aria-label="Like shot"><i class="fa-solid fa-heart"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="shot-meta">
+                <div class="designer-info">
+                    <img src="im4.jpeg" alt="Designer Avatar" class="avatar">
+                    <span class="designer-name">Pixel Craft</span>
+                    <span class="badge">Pro</span>
+                </div>
+                <div class="shot-stats">
+                    <span class="stat-item"><i class="fa-solid fa-heart"></i> 215</span>
+                    <span class="stat-item"><i class="fa-solid fa-eye"></i> 19.4k</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
