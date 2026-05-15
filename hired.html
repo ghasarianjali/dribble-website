@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <style>
-    /* Structural Layout Tokens */
+    
 * {
     margin: 0;
     padding: 0;
@@ -21,7 +21,7 @@ body {
     padding: 40px 20px;
 }
 
-/* Master Layout Framework Splitting */
+
 .board-layout {
     display: flex;
     gap: 40px;
@@ -30,7 +30,6 @@ body {
     align-items: flex-start;
 }
 
-/* Responsive Sticky Sidebar Filter Column */
 .filter-sidebar {
     width: 280px;
     background-color: #c0bdbd;
@@ -85,7 +84,7 @@ body {
     height: 16px;
 }
 
-/* Main Stream Container Display */
+
 .feed-stream {
     flex: 1;
     display: flex;
@@ -136,7 +135,7 @@ body {
     50% { opacity: 0.4; }
 }
 
-/* Portfolio Brief Contract Cards */
+
 .brief-card {
     background-color: #c3c1c1;
     border: 1px solid #c9c9ca;
@@ -152,7 +151,7 @@ body {
     border-color: #d0d0d5;
 }
 
-/* Premium Highlight Border Variant */
+
 .brief-card.premium {
     border-left: 4px solid #ea4c89;
 }
@@ -198,7 +197,7 @@ body {
     margin-bottom: 24px;
 }
 
-/* Lower Metric Footers */
+
 .brief-footer {
     display: flex;
     justify-content: space-between;
@@ -242,7 +241,7 @@ body {
     background-color: #cd7194;
 }
 
-/* Mobile Component Breakpoints Optimization */
+
 @media (max-width: 768px) {
     .board-layout {
         flex-direction: column;
@@ -269,10 +268,10 @@ body {
      
         
     </nav>
-    <!-- Main Board Wrapper Layout -->
+   
     <div class="board-layout">
         
-        <!-- Filter Controls Sidebar Navigation -->
+        
         <aside class="filter-sidebar">
             <div class="sidebar-header">
                 <h3><i class="fa-solid fa-sliders"></i> Filter Briefs</h3>
@@ -301,7 +300,7 @@ body {
             </div>
         </aside>
 
-        <!-- Briefs Stream Feed Grid -->
+       
         <main class="feed-stream">
             <header class="feed-header">
                 <div class="title-meta">
@@ -311,7 +310,7 @@ body {
                 <span class="pulse-counter"><span class="pulse-dot"></span> 1,000+ Briefs Live</span>
             </header>
 
-            <!-- Card Element 1: High Budget Brief -->
+            
             <article class="brief-card premium">
                 <div class="card-header">
                     <span class="category-pill">Website Design</span>
@@ -330,7 +329,7 @@ body {
                 </div>
             </article>
 
-            <!-- Card Element 2: Standard Brief -->
+           
             <article class="brief-card">
                 <div class="card-header">
                     <span class="category-pill">UI UX Design</span>
